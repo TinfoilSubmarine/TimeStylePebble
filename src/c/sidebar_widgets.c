@@ -458,9 +458,7 @@ void CurrentWeather_draw(GContext* ctx, int yPosition) {
 
     int currentTemp = Weather_weatherInfo.currentTemp;
 
-    if(!globalSettings.useMetric) {
-      currentTemp = roundf(currentTemp * 1.8f + 32);
-    }
+    currentTemp = roundf(currentTemp * 1.8f + 32);
 
     char tempString[8];
 
@@ -594,10 +592,8 @@ void WeatherForecast_draw(GContext* ctx, int yPosition) {
     int highTemp = Weather_weatherForecast.highTemp;
     int lowTemp  = Weather_weatherForecast.lowTemp;
 
-    if(!globalSettings.useMetric) {
-      highTemp = roundf(highTemp * 1.8f + 32);
-      lowTemp  = roundf(lowTemp * 1.8f + 32);
-    }
+    highTemp = roundf(highTemp * 1.8f + 32);
+    lowTemp  = roundf(lowTemp * 1.8f + 32);
 
     char tempString[8];
 
